@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://kuiba-wiki.gitee.io
+url: https://kuiba-wiki.github.io # Site url
 permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
@@ -106,10 +106,8 @@ theme: next
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: 
-    github:
-      url: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git
-      branch: page
+  repo: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git # Deploy repo
+  branch: page
 
 baidusitemap:
     path: baidusitemap.xml

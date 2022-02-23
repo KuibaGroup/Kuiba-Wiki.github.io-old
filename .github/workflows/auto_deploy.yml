@@ -18,37 +18,33 @@ jobs:
           git config --global user.email "cn-traveler@qq.com"
           git config --global user.name "CN-traveler"
       - name: Sync Gitee
-        run: | 
-          git remote -v
-          git remote add gitee git@gitee.com:kuiba-wiki/kuiba-wiki.git
-          git remote -v
-          git pull gitee master
-          git commit -m '合并Gitee'
-      # - name: Setup Node
-      #   uses: actions/setup-node@main
-      #   with:
-      #     node-version: '14'
-      # - name: Install Hexo
-      #   run: |
-      #     npm install hexo-cli -g
-      #     npm install
-      # - name: Config Gitalk
-      #   env: 
-      #     CLIENT_ID: ${{ secrets.CLIENT_ID }}
-      #     CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-      #   run: |
-      #     node .github/script/gitalk.js $CLIENT_ID $CLIENT_SECRET
-      # - name: Deploy Hexo
-      #   run: |
-      #     hexo clean
-      #     hexo deploy
-      # - name: Sync Gitee
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      #   uses: wearerequired/git-mirror-action@master
-      #   with:
-      #     source-repo: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git
-      #     destination-repo: git@gitee.com:kuiba-wiki/kuiba-wiki.git
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        uses: wearerequired/git-mirror-action@master
+        with:
+          source-repo: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git
+          destination-repo: git@gitee.com:kuiba-wiki/kuiba-wiki.git
+      - name: Setup Node
+        uses: actions/setup-node@main
+        with:
+          node-version: '14'
+      - name: Install Hexo
+        run: |
+          npm install hexo-cli -g
+          npm install
+      - name: Config Gitalk
+        env: 
+          CLIENT_ID: ${{ secrets.CLIENT_ID }}
+          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        run: |
+          node .github/script/gitalk.js $CLIENT_ID $CLIENT_SECRET
+      - name: Deploy Hexo
+        run: |
+          hexo clean
+          hexo deploy
+      - name: Config Deploy
+        run: |
+          node .github/script/deploy.js
       # - name: Update Gitee Pages
       #   uses: yanglbme/gitee-pages-action@main
       #   with:

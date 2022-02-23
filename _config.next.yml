@@ -613,7 +613,7 @@ livere_uid: # <your_uid>
 # Gitalk
 # For more information: https://gitalk.github.io
 gitalk:
-  enable: false # gitalk enable
+  enable: false # Gitalk enable
   github_id: Kuiba-Wiki # GitHub repo owner
   repo: Kuiba-Wiki.github.io # Repository name to store issues
   client_id: $CLIENT_ID # GitHub Application Client ID
