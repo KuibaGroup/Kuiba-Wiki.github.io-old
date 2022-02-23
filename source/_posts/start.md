@@ -1,18 +1,7 @@
 ---
 title: 快速开始
-date: 9999-12-31 23:59:59
 comments: false
 ---
-
-<div id="page_start_point"></div>
-<script>
-    document.getElementById('page_start_point').parentElement.parentElement.children[3].style.margin = '0';
-    document.getElementById('page_start_point').parentElement.parentElement.children[3].children[1].style.display = "none";
-</script>
-
-此页将快速地教会你在站内发表/编辑文章。
-
-<!--more-->
 
 # 新手教程
 
@@ -23,7 +12,6 @@ comments: false
 1. 进入站点首页，点击文章顶部发帖链接。如图: ![发表文章 步骤一](111.png)
 1. 进入发帖页面，点击 Gitee 或 Github 链接。如图: ![发表文章 步骤二](112.png)
 1. 进入托管平台，如图所示操作:
-    1. Gitee: ![发表文章 步骤三](1131.png)
     1. Github: 如果为首次发表，需 Fork 本仓库后方可继续操作 ![发表文章 步骤三](1132.png) ![发表文章 步骤三](1133.png) ![发表文章 步骤三](1134.png) ![发表文章 步骤三](1135.png)
     1. 示例:
     ```txt 文件名称
@@ -61,9 +49,3 @@ comments: false
 # 高级教程
 
 详细教程待更。
-
-<style>
-    .post-footer, .post-edit-link {
-        display: none;
-    }
-</style>
