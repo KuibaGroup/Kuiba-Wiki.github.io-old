@@ -110,3 +110,22 @@ deploy:
     github:
       url: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git
       branch: page
+
+baidusitemap:
+    path: baidusitemap.xml
+sitemap:
+    path: sitemap.xml
+
+symbols_count_time:
+  awl: 4
+  wpm: 275
+  time: false
+  symbols: true
+  total_time: false
+  total_symbols: true
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html
