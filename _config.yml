@@ -107,7 +107,7 @@ theme: next
 deploy:
   type: git
   repo: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git # Deploy repo
-  branch: page
+  branch: github # Deploy branch
 
 baidusitemap:
     path: baidusitemap.xml
