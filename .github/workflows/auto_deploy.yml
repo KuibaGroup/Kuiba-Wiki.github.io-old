@@ -20,6 +20,8 @@ jobs:
       - name: Sync Gitee
         run: | 
           git remote -v
+          git remote add gitee git@gitee.com:kuiba-wiki/kuiba-wiki.git
+          git remote -v
       # - name: Setup Node
       #   uses: actions/setup-node@main
       #   with:
