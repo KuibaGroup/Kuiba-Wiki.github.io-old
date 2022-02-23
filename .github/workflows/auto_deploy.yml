@@ -8,21 +8,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Setup Node
-        uses: actions/setup-node@main
-        with:
-          node-version: '14'
-      - name: Install Hexo
-        run: |
-          npm install hexo-cli -g
-          npm install
-      - name: Config Gitalk
-        env: 
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-        run: |
-          node .github/script/gitalk.js $CLIENT_ID $CLIENT_SECRET
-      - name: Deploy Hexo
+      - name: Config Private Key
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         run: |
@@ -31,27 +17,37 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           git config --global user.email "cn-traveler@qq.com"
           git config --global user.name "CN-traveler"
-          hexo clean
-          hexo deploy
-  sync:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
       - name: Sync Gitee
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-        uses: wearerequired/git-mirror-action@master
-        with:
-          source-repo: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git
-          destination-repo: git@gitee.com:kuiba-wiki/kuiba-wiki.git
-  update:
-    needs: sync
-    runs-on: ubuntu-latest
-    steps:
-      - name: Update Gitee Pages
-        uses: yanglbme/gitee-pages-action@main
-        with:
-          gitee-username: ${{ secrets.GITEE_USERNAME }}
-          gitee-password: ${{ secrets.GITEE_PASSWORD }}
-          gitee-repo: kuiba-wiki/kuiba-wiki
-          branch: page
+          git remote -v
+      # - name: Setup Node
+      #   uses: actions/setup-node@main
+      #   with:
+      #     node-version: '14'
+      # - name: Install Hexo
+      #   run: |
+      #     npm install hexo-cli -g
+      #     npm install
+      # - name: Config Gitalk
+      #   env: 
+      #     CLIENT_ID: ${{ secrets.CLIENT_ID }}
+      #     CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+      #   run: |
+      #     node .github/script/gitalk.js $CLIENT_ID $CLIENT_SECRET
+      # - name: Deploy Hexo
+      #   run: |
+      #     hexo clean
+      #     hexo deploy
+      # - name: Sync Gitee
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      #   uses: wearerequired/git-mirror-action@master
+      #   with:
+      #     source-repo: git@github.com:Kuiba-Wiki/Kuiba-Wiki.github.io.git
+      #     destination-repo: git@gitee.com:kuiba-wiki/kuiba-wiki.git
+      # - name: Update Gitee Pages
+      #   uses: yanglbme/gitee-pages-action@main
+      #   with:
+      #     gitee-username: ${{ secrets.GITEE_USERNAME }}
+      #     gitee-password: ${{ secrets.GITEE_PASSWORD }}
+      #     gitee-repo: kuiba-wiki/kuiba-wiki
+      #     branch: page
