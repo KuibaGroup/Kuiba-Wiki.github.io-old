@@ -38,17 +38,21 @@ jobs:
           CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
         run: |
           node .github/script/gitalk.js $CLIENT_ID $CLIENT_SECRET
-      - name: Deploy Hexo
+      - name: Deploy Hexo Github
         run: |
           hexo clean
           hexo deploy
       - name: Config Deploy
         run: |
           node .github/script/deploy.js
-      # - name: Update Gitee Pages
-      #   uses: yanglbme/gitee-pages-action@main
-      #   with:
-      #     gitee-username: ${{ secrets.GITEE_USERNAME }}
-      #     gitee-password: ${{ secrets.GITEE_PASSWORD }}
-      #     gitee-repo: kuiba-wiki/kuiba-wiki
-      #     branch: page
+      - name: Deploy Hexo Gitee
+        run: |
+          hexo clean
+          hexo deploy
+      - name: Update Gitee Pages
+        uses: yanglbme/gitee-pages-action@main
+        with:
+          gitee-username: ${{ secrets.GITEE_USERNAME }}
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          gitee-repo: kuiba-wiki/kuiba-wiki
+          branch: page
