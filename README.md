@@ -1,5 +1,7 @@
 # 新手教程
 
+[![Join the chat at https://gitter.im/Kuiba-Wiki/Kuiba-Wiki.github.io](https://badges.gitter.im/Kuiba-Wiki/Kuiba-Wiki.github.io.svg)](https://gitter.im/Kuiba-Wiki/Kuiba-Wiki.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 此教程适用于没有计算机编程经验的用户，此教程可以简便操作流程。但如果你有一定的计算机编程经验我推荐你使用下方的[高级教程](#高级教程)。
 
 ## 发表文章
