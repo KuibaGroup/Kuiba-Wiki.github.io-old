@@ -19,16 +19,16 @@ minify: false
 # Define custom file paths.
 # Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  head: source/_data/head.njk
+  # head: source/_data/head.njk
   # header: source/_data/header.njk
   # sidebar: source/_data/sidebar.njk
   # postMeta: source/_data/post-meta.njk
   # postBodyEnd: source/_data/post-body-end.njk
-  footer: source/_data/footer.njk
+  # footer: source/_data/footer.njk
   # bodyEnd: source/_data/body-end.njk
   # variable: source/_data/variables.styl
   # mixin: source/_data/mixins.styl
-  # style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -75,7 +75,7 @@ creative_commons:
 # Open graph settings
 # See: https://hexo.io/docs/helpers#open-graph
 open_graph:
-  enable: true
+  enable: false
   # Add pairs each line to customize 
   options: ''
 
@@ -105,7 +105,7 @@ menu:
 # Enable / Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 
 # ---------------------------------------------------------------
@@ -121,7 +121,7 @@ sidebar:
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
   # Pisces | Gemini: 240
-  #width: 300
+  width: 240
 
   # Sidebar Display (only for Muse | Mist), available values:
   #  - post    expand on posts automatically. Default.
@@ -154,15 +154,15 @@ site_state: true
 social:
   Gitee: https://gitee.com/Kuiba-Wiki || fab fa-git
   GitHub: https://github.com/Kuiba-Wiki || fab fa-github
-  #E-Mail: mailto:yourname@gmail.com || fa fa-envelope
-  #Weibo: https://weibo.com/yourname || fab fa-weibo
-  #Google: https://plus.google.com/yourname || fab fa-google
-  #Twitter: https://twitter.com/yourname || fab fa-twitter
-  #FB Page: https://www.facebook.com/yourname || fab fa-facebook
-  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
-  #YouTube: https://youtube.com/yourname || fab fa-youtube
-  #Instagram: https://instagram.com/yourname || fab fa-instagram
-  #Skype: skype:yourname?call|chat || fab fa-skype
+  # E-Mail: mailto:yourname@gmail.com || fa fa-envelope
+  # Weibo: https://weibo.com/yourname || fab fa-weibo
+  # Google: https://plus.google.com/yourname || fab fa-google
+  # Twitter: https://twitter.com/yourname || fab fa-twitter
+  # FB Page: https://www.facebook.com/yourname || fab fa-facebook
+  # StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
+  # YouTube: https://youtube.com/yourname || fab fa-youtube
+  # Instagram: https://instagram.com/yourname || fab fa-instagram
+  # Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
   enable: true
@@ -268,21 +268,21 @@ reward_settings:
   # If true, a donate button will be displayed in every article by default.
   enable: false
   animation: false
-  #comment: Buy me a coffee
+  # comment: Buy me a coffee
 
 reward:
-  #wechatpay: /images/wechatpay.png
-  #alipay: /images/alipay.png
-  #paypal: /images/paypal.png
-  #bitcoin: /images/bitcoin.png
+  # wechatpay: /images/wechatpay.png
+  # alipay: /images/alipay.png
+  # paypal: /images/paypal.png
+  # bitcoin: /images/bitcoin.png
 
 # Subscribe through Telegram Channel, Twitter, etc.
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
-  #Twitter: https://twitter.com/username || fab fa-twitter
-  #Telegram: https://t.me/channel_name || fab fa-telegram
-  #WeChat: /images/wechat_channel.jpg || fab fa-weixin
-  #RSS: /atom.xml || fa fa-rss
+  # Twitter: https://twitter.com/username || fab fa-twitter
+  # Telegram: https://t.me/channel_name || fab fa-telegram
+  # WeChat: /images/wechat_channel.jpg || fab fa-weixin
+  # RSS: /atom.xml || fa fa-rss
 
 # Related popular posts
 # Dependencies: https://github.com/sergeyzwezdin/hexo-related-posts
@@ -371,9 +371,9 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
-    style:
+    style: flat
 
 back2top:
   enable: true
@@ -395,7 +395,7 @@ reading_progress:
 
 # Bookmark Support
 bookmark:
-  enable: false
+  enable: true
   # Customize the color of the bookmark.
   color: "#222"
   # If auto, save the reading progress when closing the page or clicking the bookmark-icon.
@@ -477,7 +477,7 @@ exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://developers.google.com/search
-google_site_verification:
+google_site_verification: Lx6KtXmKbORXXoEMyg8SFmQVmvL6OK9X_AMBBnnHfMc
 
 # Bing Webmaster tools verification.
 # See: https://www.bing.com/webmasters
