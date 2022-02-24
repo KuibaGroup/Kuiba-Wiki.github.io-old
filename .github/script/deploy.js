@@ -12,3 +12,10 @@ fs.readFile('_config.yml', function (error, data) {
         })
     }
 })
+fs.writeFile('source/_data/head.njk', '<meta name="google-site-verification" content="2b9bRX_y9bcOfteSamVfvKl04A2-h4autV9BpH8tfyA" />', function (error) {
+    if (error) {
+        console.log('write error')
+    } else {
+        console.log('write ok')
+    }
+})
