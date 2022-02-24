@@ -24,7 +24,7 @@ custom_file_path:
   # sidebar: source/_data/sidebar.njk
   # postMeta: source/_data/post-meta.njk
   # postBodyEnd: source/_data/post-body-end.njk
-  # footer: source/_data/footer.njk
+  footer: source/_data/footer.njk
   # bodyEnd: source/_data/body-end.njk
   # variable: source/_data/variables.styl
   # mixin: source/_data/mixins.styl
@@ -89,8 +89,11 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  Latest Article: / || fa fa-newspaper
-  Post Article: /post/ || fa fa-edit
+  All Article: / || fa fa-newspaper
+  Contribute Wiki:
+    default: /join/ || fa fa-hands-helping
+    Wiki Guide: /docs/ || fa fa-book
+    Post Article: /post/ || fa fa-edit
   # about: /about/ || fa fa-user
   # tags: /tags/ || fa fa-tags
   # categories: /categories/ || fa fa-th
@@ -292,7 +295,7 @@ related_posts:
 # Easily browse and edit blog source code online.
 post_edit:
   enable: true
-  url: post/? # Link for view source
+  url: join/post/? # Link for view source
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
@@ -881,7 +884,7 @@ vendors:
   # The default CDN provider of third-party plugins.
   # Available values: local | jsdelivr | unpkg | cdnjs | custom
   # Dependencies for `plugins: local`: https://github.com/next-theme/plugins
-  plugins: jsdelivr
+  plugins: local
   # Custom CDN URL
   # For example:
   # custom_cdn_url: https://cdn.jsdelivr.net/npm/${npm_name}@${version}/${minified}

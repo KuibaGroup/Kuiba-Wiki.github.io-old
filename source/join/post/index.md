@@ -1,6 +1,5 @@
 ---
 title: 发表文章
-toc: false
 comments: false
 ---
 
@@ -10,23 +9,24 @@ comments: false
 {% note success %}
 
 #### 支持自动部署
-基于 [Github Actions](https://github.com/Kuiba-Wiki/Kuiba-Wiki.github.io/actions) 服务实现。
+基于 [Github Actions](https://github.com/Kuiba-Wiki/Kuiba-Wiki.github.io/actions) 实现。
 
 {% endnote %}
 
-{% button https://github.com/Kuiba-Wiki/Kuiba-Wiki.github.io/new/master/source/_posts, 在 Github 上发帖, fab fa-github fa-fw post_github %}
+|{% button https://github.com/Kuiba-Wiki/Kuiba-Wiki.github.io/new/master/source/_posts, 在 Github 上发帖, fab fa-github fa-fw post_github %}|
+|:-:|
 
 <!-- endtab -->
 <!-- tab Gitee@fab fa-git fa-fw -->
 {% note warning %}
 
 #### 不支持自动部署
-等待[仓库镜像管理](https://gitee.com/help/articles/4336)服务公测。
+等待[仓库镜像管理](https://gitee.com/help/articles/4336)公测。
 
 {% endnote %}
 
-{% button https://gitee.com/kuiba-wiki/kuiba-wiki/new/master/source/_posts, 在 Gitee 上发帖, fab fa-git fa-fw post_gitee %}
-
+|{% button https://gitee.com/kuiba-wiki/kuiba-wiki/new/master/source/_posts, 在 Gitee 上发帖, fab fa-git fa-fw post_gitee %}|
+|:-:|
 
 <!-- endtab -->
 {% endtabs %}
@@ -45,7 +45,6 @@ comments: false
                 github_btn.href = 'https://github.com/Kuiba-Wiki/Kuiba-Wiki.github.io/edit/master/source/' + path;
                 gitee_btn.innerHTML = gitee_btn.innerHTML.replace("发帖", "编辑");
                 gitee_btn.href = 'https://gitee.com/kuiba-wiki/kuiba-wiki/edit/master/source/' + path;
-                
             }
         }
     } catch(e) {}
