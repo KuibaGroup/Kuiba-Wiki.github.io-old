@@ -22,7 +22,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@main
         with:
-          node-version: '14'
+          node-version: '16'
       - name: Install Hexo
         run: |
           npm install hexo-cli -g
