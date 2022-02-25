@@ -1,5 +1,6 @@
 ---
 title: 百科指南
+comments: false
 ---
 # 目录
 
