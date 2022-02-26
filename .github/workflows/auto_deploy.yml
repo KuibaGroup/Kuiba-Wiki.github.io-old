@@ -27,12 +27,6 @@ jobs:
         run: |
           npm install hexo-cli -g
           npm install
-      - name: Config Gitalk
-        env: 
-          CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
-        run: |
-          node .github/script/gitalk.js $CLIENT_ID $CLIENT_SECRET
       - name: Deploy Hexo Github
         run: |
           hexo clean
