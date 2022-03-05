@@ -89,11 +89,16 @@ open_graph:
 # Value before `||` delimiter is the target link, value after `||` delimiter is the name of Font Awesome icon.
 # External url should start with http:// or https://
 menu:
-  All Article: / || fa fa-newspaper
-  Contribute Wiki:
-    default: /join/ || fa fa-hands-helping
-    Wiki Guide: /docs/ || fa fa-book
-    Post Article: /post/ || fa fa-edit
+  所有文章: / || fa fa-newspaper
+  百科索引:
+    default: /百科索引/ || fa fa-link
+    categories: /分类/ || fa fa-th
+    tags: /标签/ || fa fa-tags
+    archives: /归档/ || fa fa-archive
+  参与维护:
+    default: /参与维护/ || fa fa-hands-helping
+    使用文档: /使用文档/ || fa fa-book
+    发表文章: /发表文章/ || fa fa-edit
   # about: /about/ || fa fa-user
   # tags: /tags/ || fa fa-tags
   # categories: /categories/ || fa fa-th
@@ -184,7 +189,7 @@ links:
 toc:
   enable: true
   # Automatically add list number to toc.
-  number: true
+  number: false
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
@@ -295,7 +300,7 @@ related_posts:
 # Easily browse and edit blog source code online.
 post_edit:
   enable: true
-  url: join/post/? # Link for view source
+  url: 参与维护/发表文章/? # Link for view source
   # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/ # Link for fork & edit
 
 # Show previous post and next post in post footer if exists
@@ -717,7 +722,7 @@ firestore:
 # Show Views / Visitors of the website / page with busuanzi.
 # For more information: http://ibruce.info/2015/04/04/busuanzi/
 busuanzi_count:
-  enable: false
+  enable: true
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
