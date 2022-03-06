@@ -766,7 +766,7 @@ local_search:
 # A button to open designated chat widget in sidebar.
 # Firstly, you need to enable and configure the chat service.
 chat:
-  enable: true
+  enable: false
   icon: fa fa-comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
 
@@ -789,7 +789,7 @@ tidio:
 # Gitter Support
 # For more information: https://gitter.im
 gitter:
-  enable: true
+  enable: false
   room: Kuiba-Wiki/Kuiba-Wiki.github.io
 
 
